@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border:5px solid #000;
+            background-color: aqua;
+            height: 300px;
+            display: grid;grid-gap: 10px;
+        }
+
+        .container>div{
+            color:#fff;text-align: center;
+            font-size: 30px;background-color: blue;
+        }
+        .container1{ grid-template-columns: auto auto auto;}
+        .container1>div:nth-child(1){
+            background-color: red;
+            grid-column: 1 / span 2;
+        }
+        .container1>div:nth-child(2){
+            background-color: rgb(92, 243, 17);
+            grid-row:1 / span 2;
+            grid-column-start: 3;
+        }
+        .container1>div:nth-child(5){
+            background-color: rgb(232, 29, 147);
+            grid-row-start:3;
+            grid-column:1 / span 3
+        }
+
+        .conatiner2{grid-template-columns: auto auto auto auto auto auto;margin: 50px 0;}
+        .conatiner2>div:nth-child(8){
+            background-color: coral;
+           /*  grid-row:1 / span 4;
+            grid-column:2 / span 4; */
+            grid-area: 1/2 /5/6;
+        }
+
+        .conatiner3{grid-template-columns: auto auto auto auto auto auto;margin: 50px 0;}
+        .conatiner3>div:nth-child(8){
+            background-color: coral;
+            grid-area: 2 / 1/ span 2 / span 3 ;
+        }
+
+        .container4{
+            width: 400px;height: 400px;
+            grid-gap: 0;
+        }
+        .container4>div{
+            margin: 10px;text-align: center;
+            border-radius: 5px;
+        }
+        .container4>div:nth-child(1){
+            grid-area: 1/1/2/2;
+        }
+        .container4>div:nth-child(2){
+            grid-area: 1/2/2/3;
+        }
+        .container4>div:nth-child(3){
+            grid-area: 2/1/3/2;
+        }
+        .container4>div:nth-child(4){
+            grid-area: 2/2/3/3;
+        }
+        .container5{
+            width: 400px;height: 400px;
+            grid-gap: 0;
+        }
+        .container5>div:nth-child(1){
+            grid-area: 1/1/2/2;
+            background-color: red;
+        }
+        .container5>div:nth-child(2){
+            grid-area: 1/2/3/3;
+            background-color: rgb(90, 214, 190);
+            z-index: 1;
+        }
+        .container5>div:nth-child(3){
+            grid-area: 2/2/3/4;
+            background-color: rgb(165, 72, 150);
+        }
+    </style>
+</head>
+<body>
+    <div class='container container5'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class='container container4'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class='container container1'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+    <div class='container conatiner2'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+    <div class='container conatiner3'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </div>
+</body>
+</html>
